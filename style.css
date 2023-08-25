@@ -1,14 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&display=swap');
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Bricolage Grotesque', sans-serif;
 }
+
 nav{
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    margin: 20px;
+    justify-content: space-around;
+    /* margin-top: 20px; */
+    position: fixed;
+    background-color: wheat;
+}
+nav span{
+    font-size: 30px;
+    color: #352F44;
+    cursor: pointer;
+    margin-top: 10px;
 }
 nav ul{
     display: flex;
+    margin-top: 10px;
 }
 nav ul li{
     margin-left: 100px;
@@ -17,14 +30,14 @@ nav ul li{
 }
 nav ul li a{
     text-decoration: none;
-    color: black;
+    color: #191D88;
 }
 nav ul li a::after{
     content: "";
     display: block;
     height: 4px;
     width: 100%;
-    background-color: #BA704F;
+    background-color: #191D88;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease;
@@ -36,7 +49,7 @@ a.call-btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #BA704F;
+    background-color: #191D88;
     height: 50px;
     width: 50px;
     border-radius: 50%; 
@@ -47,7 +60,7 @@ a.call-btn::after,
 a.call-btn::before{
     content: "";
     position: absolute;
-    background-color: #BA704F;
+    background-color: #191D88;
     z-index: -1;
     height: 40px;
     width: 40px;
@@ -65,4 +78,129 @@ a.call-btn::before{
         transform: scale(2);
         opacity: 0;
     }
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F1F0E8;
+}
+.content{
+    display: flex;
+}
+.content1{
+    margin-top: 50px;
+    margin-right: 80px;
+    justify-content: center;
+    align-items: center;
+}
+.content1 h1{
+    color: #191D88;
+    font-size: 35px;
+}
+.content1 h1 span{
+    color: #352F44;
+}
+.content1 button{
+    padding: 15px;
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 20px;
+    border: solid 1px black;
+    cursor: pointer;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.content1 button::before{
+    content: "";
+    width: 0;
+    height: 50px;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s ease;
+    display: block;
+    background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+    z-index: -1;
+}
+.content1 button:hover::before{
+    width: 200px;
+}
+.content1 h2{
+    color: #191D88;
+    font-size: 30px;
+}
+.content2{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.content2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.list div{
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    transform: translateY(11px);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.list div span{
+    font-size: 18px;
+}
+.list:hover div{
+    transform: translateY(-11px);
+}
+.socials{
+    display: flex;
+    margin-top: 40px;
+}
+.socials .list{
+    list-style: none;
+    margin: 0 50px 0 0 ;
+}
+.list i{
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    color: #191D88;
+}
+.list:hover i{
+    opacity: 0;
+    color: #191D88;
+}
+.list span{
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: #191D88;
+}
+.list:hover span{
+    opacity: 1;
+    color: #191D88;
+}
+.about-content h1{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 20px;
+    color: #191D88;
+}
+.about-content p{
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    color: #183D3D;
+    margin-bottom: 20px;
 }
