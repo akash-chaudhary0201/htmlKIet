@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    margin-left: 100px;
+    list-style: none;
+    font-size: 24px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+nav ul li a::after{
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: #BA704F;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+nav ul li a:hover:after{
+    transform: scaleX(1);
+}
+a.call-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #BA704F;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%; 
+    text-decoration: none;
+    cursor: pointer;
+}
+a.call-btn::after,
+a.call-btn::before{
+    content: "";
+    position: absolute;
+    background-color: #BA704F;
+    z-index: -1;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+a.call-btn::after{
+    animation: anime 2s ease-out infinite;
+}
+a.call-btn::before{
+    animation: anime 2s  1s ease-out infinite;
+}
+@keyframes anime {
+    100%{
+        transform: scale(2);
+        opacity: 0;
+    }
+}
