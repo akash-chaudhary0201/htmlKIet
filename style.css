@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -330,24 +334,60 @@ a.call-btn::after {
     background-color: #BA704F;
 }
 
-.books-info-row-1 {
+.project-info-row-1 {
     display: flex;
     justify-content: space-around;
 }
 
-.books-info-row-2 {
+.project-info-row-2 {
     display: flex;
     justify-content: space-around;
     margin-bottom: 10px;
 }
 
-.books-info {
+#project-info {
     background-color: #CEE6F3;
 }
 
-.books-info h1 {
+#project-info h1 {
     text-align: center;
     font-size: 40px;
     padding-top: 20px;
+    color: #191D88;
+}
+
+/* Skills Set */
+.skills {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: 25%;
+    padding: 20px;
+}
+
+.skills-name ul li {
+    font-size: 20px;
+    font-size: bold;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.skills-list {
+    list-style: none;
+    margin-left: 50px;
+}
+
+.skills-list li {
+    margin-bottom: 20px;
+}
+
+.skill-level {
+    height: 25px;
+    width: 400px;
+}
+
+.skill-head {
+    text-align: center;
+    font-size: 30px;
     color: #191D88;
 }
