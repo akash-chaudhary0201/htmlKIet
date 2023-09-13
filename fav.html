@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Website with Favicon</title>
     <link rel="icon" href="favicon.ico" type="image/quick.png">
 </head>
+
 <body>
-    <!-- Your website content here -->
+
+    <script>
+        var obj = {
+            name: "Akash",
+            class: "MCA",
+            age: 20
+        }
+
+        var jsonObj = JSON.stringify(obj)
+        obj.name = "Sumit"
+        console.log(jsonObj.name);
+    </script>
 </body>
+
 </html>
